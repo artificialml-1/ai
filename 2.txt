@@ -1,0 +1,19 @@
+def dfs(graph, node, visited=None): 
+    if visited is None: 
+        visited = [] 
+    if node not in visited: 
+        print(node, end=" ") 
+        visited.append(node) 
+        for neighbor in graph[node]: 
+            dfs(graph, neighbor, visited) 
+ 
+graph = { 
+    'A': ['B', 'C'], 
+    'B': ['D', 'E'], 
+    'C': ['F'], 
+    'D': [], 
+    'E': ['F'], 
+    'F': [] 
+} 
+print("DFS Traversal:") 
+dfs(graph, 'A')
