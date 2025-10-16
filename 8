@@ -1,0 +1,15 @@
+def monkey_banana_problem(n):
+    climb = 0
+    bananas = 0
+    hungry = True
+    for i in range(n):
+        if hungry:
+            climb += 1
+            bananas += 1
+            hungry = False
+        else:
+            climb += 1
+    return climb, bananas
+n = 10
+climb, bananas = monkey_banana_problem(n)
+print(f"The monkey made {climb} climbs and get {bananas} bananas.")
