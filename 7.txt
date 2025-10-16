@@ -1,0 +1,8 @@
+def tower_of_hanoi(n, source, aux, dest):
+    if n == 0:
+        return
+    tower_of_hanoi(n - 1, source, dest, aux)
+    print(f"Move disk {n} from source {source} to destination {dest}")
+    tower_of_hanoi(n - 1, aux, source, dest)
+n=3
+tower_of_hanoi(n,"A","B","C")
